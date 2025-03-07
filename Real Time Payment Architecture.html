@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
+  <!-- Styles -->
+  <defs>
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+      @keyframes dataFlow {
+        0% { stroke-dashoffset: 100; }
+        100% { stroke-dashoffset: 0; }
+      }
+      .section-title {
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        fill: #ffffff;
+        font-size: 22px;
+        text-anchor: middle;
+      }
+      .subtitle {
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        fill: #333333;
+        font-size: 16px;
+        text-anchor: middle;
+      }
+      .box-title {
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        fill: #333333;
+        font-size: 14px;
+        text-anchor: middle;
+      }
+      .description {
+        font-family: Arial, sans-serif;
+        fill: #555555;
+        font-size: 12px;
+        text-anchor: middle;
+      }
+      .data-flow {
+        stroke: #3498db;
+        stroke-width: 3;
+        stroke-dasharray: 10;
+        fill: none;
+        animation: dataFlow 3s linear infinite;
+      }
+      .customer-section {
+        animation: fadeIn 1s ease-in;
+      }
+      .integration-section {
+        animation: fadeIn 1s ease-in 0.5s forwards;
+        opacity: 0;
+      }
+      .sap-section {
+        animation: fadeIn 1s ease-in 1s forwards;
+        opacity: 0;
+      }
+      .business-drivers {
+        animation: fadeIn 1s ease-in 1.5s forwards;
+        opacity: 0;
+      }
+      .icon-pulse {
+        animation: pulse 2s infinite;
+      }
+    </style>
+    
+    <!-- Gradient Definitions -->
+    <linearGradient id="customerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6A11CB" />
+      <stop offset="100%" stop-color="#2575FC" />
+    </linearGradient>
+    
+    <linearGradient id="integrationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A7BD5" />
+      <stop offset="100%" stop-color="#00D2FF" />
+    </linearGradient>
+    
+    <linearGradient id="sapGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#11998e" />
+      <stop offset="100%" stop-color="#38ef7d" />
+    </linearGradient>
+    
+    <linearGradient id="driverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F09819" />
+      <stop offset="100%" stop-color="#FF512F" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title - Moved up to make room -->
+  <rect x="300" y="10" width="400" height="50" rx="10" fill="#1b2838" />
+  <text x="500" y="42" class="section-title">Real-Time Payment Integration</text>
+  <text x="500" y="86" class="subtitle" fill="#666">SAP Event Mesh, Integration Suite, and FICA</text>
+  
+<g class="business-drivers">
+    <!-- Section Header -->
+    <rect x="50" y="120" width="280" height="55" rx="12" fill="url(#driverGradient)" />
+    <text x="190" y="155" class="section-title" text-anchor="middle" font-weight="bold" fill="#fff">Business Drivers</text>
+
+ <!-- Driver 1 -->
+        <g class="driver" transform="translate(0, 0)" opacity="0">
+            <animate attributeName="opacity" from="0" to="1" begin="0.5s" dur="0.8s" fill="freeze"/>
+            <rect x="50" y="190" width="250" height="60" rx="12" fill="#fff" stroke="#FF512F" stroke-width="2" filter="url(#shadow)" />
+            <text x="60" y="220" font-family="Arial" fill="#FF512F" font-size="24">💰</text>
+            <text x="180" y="215" class="box-title" font-size="16" font-weight="bold" fill="#333">Real-time Financial Updates</text>
+            <text x="185" y="230" class="description" font-size="14" fill="#666">Immediate account balance accuracy</text>
+        </g>
+
+        <!-- Driver 2 -->
+        <g class="driver" transform="translate(0, 80)" opacity="0">
+            <animate attributeName="opacity" from="0" to="1" begin="1.3s" dur="0.8s" fill="freeze"/>
+            <rect x="50" y="190" width="250" height="60" rx="12" fill="#fff" stroke="#FF512F" stroke-width="2" filter="url(#shadow)" />
+            <text x="60" y="220" font-family="Arial" fill="#FF512F" font-size="24">🔄</text>
+            <text x="180" y="215" class="box-title" font-size="16" font-weight="bold" fill="#333">Automated Reconciliation</text>
+            <text x="173" y="230" class="description" font-size="14" fill="#666">Eliminate manual intervention</text>
+        </g>
+
+        <!-- Driver 3 -->
+        <g class="driver" transform="translate(0, 160)" opacity="0">
+            <animate attributeName="opacity" from="0" to="1" begin="2.1s" dur="0.8s" fill="freeze"/>
+            <rect x="50" y="190" width="250" height="60" rx="12" fill="#fff" stroke="#FF512F" stroke-width="2" filter="url(#shadow)" />
+            <text x="60" y="220" font-family="Arial" fill="#FF512F" font-size="24">📈</text>
+            <text x="160" y="215" class="box-title" font-size="16" font-weight="bold" fill="#333">Enhanced Analytics</text>
+            <text x="180" y="230" class="description" font-size="14" fill="#666">Real-time payment data insights</text>
+        </g>
+
+    <!-- Shadow Effect -->
+    <defs>
+        <filter id="shadow" x="0" y="0" width="200%" height="200%">
+            <feOffset result="offOut" in="SourceAlpha" dx="2" dy="2" />
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="3" />
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+    </defs>
+</g>
+
+  
+  <!-- Customer Section -->
+  <g class="customer-section">
+    <rect x="350" y="130" width="600" height="100" rx="10" fill="url(#customerGradient)" />
+    <text x="650" y="162" class="section-title">Customer Touchpoints</text>
+    
+    <!-- Customer Portal -->
+    <rect x="380" y="170" width="150" height="45" rx="5" fill="#fff" stroke="#6A11CB" stroke-width="2" />
+    <text x="455" y="192" class="box-title">Customer Portal</text>
+    <text x="455" y="207" class="description">User Payment Interface</text>
+    
+    <!-- Payment Gateway -->
+    <rect x="580" y="170" width="150" height="45" rx="5" fill="#fff" stroke="#6A11CB" stroke-width="2" />
+    <text x="655" y="192" class="box-title">Payment Gateways</text>
+    <text x="655" y="207" class="description">PayPal, Stripe, Cards</text>
+    
+    <!-- Success Notification -->
+    <rect x="780" y="170" width="150" height="45" rx="5" fill="#fff" stroke="#6A11CB" stroke-width="2" />
+    <text x="855" y="192" class="box-title">Success Notification</text>
+    <text x="855" y="207" class="description">Real-time Confirmation</text>
+  </g>
+  
+  <!-- Integration Section - Made more space between sections -->
+  <g class="integration-section">
+    <rect x="350" y="250" width="600" height="100" rx="10" fill="url(#integrationGradient)" />
+    <text x="650" y="282" class="section-title">Integration Layer</text>
+    
+    <!-- Event Mesh -->
+    <rect x="380" y="290" width="150" height="45" rx="5" fill="#fff" stroke="#3A7BD5" stroke-width="2" />
+    <text x="455" y="312" class="box-title">SAP Event Mesh</text>
+    <text x="455" y="327" class="description">Event-driven Architecture</text>
+    
+    <!-- Integration Suite -->
+    <rect x="580" y="290" width="150" height="45" rx="5" fill="#fff" stroke="#3A7BD5" stroke-width="2" />
+    <text x="655" y="312" class="box-title">Integration Suite</text>
+    <text x="655" y="327" class="description">Orchestration & Mapping</text>
+    
+    <!-- Error Handling -->
+    <rect x="780" y="290" width="150" height="45" rx="5" fill="#fff" stroke="#3A7BD5" stroke-width="2" />
+    <text x="855" y="312" class="box-title">Error Handling</text>
+    <text x="855" y="327" class="description">Retry & Notifications</text>
+  </g>
+  
+  <!-- SAP FICA Section - Made more space between sections -->
+  <g class="sap-section">
+    <rect x="350" y="370" width="600" height="100" rx="10" fill="url(#sapGradient)" />
+    <text x="650" y="402" class="section-title">SAP FICA</text>
+    
+    <!-- Customer Accounts -->
+    <rect x="380" y="410" width="150" height="45" rx="5" fill="#fff" stroke="#11998e" stroke-width="2" />
+    <text x="455" y="432" class="box-title">Customer Accounts</text>
+    <text x="455" y="447" class="description">Financial Records</text>
+    
+    <!-- Transaction Processing -->
+    <rect x="580" y="410" width="170" height="45" rx="5" fill="#fff" stroke="#11998e" stroke-width="2" />
+    <text x="665" y="432" class="box-title">Transaction Processing</text>
+    <text x="655" y="447" class="description">Payment Application</text>
+    
+    <!-- Reporting & Analytics -->
+    <rect x="780" y="410" width="150" height="45" rx="5" fill="#fff" stroke="#11998e" stroke-width="2" />
+    <text x="855" y="432" class="box-title">Reporting & Analytics</text>
+    <text x="855" y="447" class="description">Financial Insights</text>
+  </g>
+  
+  <!-- Connecting Arrows - Adjusted for new positions -->
+  <path d="M530 192 L580 192" class="data-flow" />
+  <path d="M730 192 L780 192" class="data-flow" />
+  <path d="M455 215 L455 290" class="data-flow" />
+  <path d="M655 215 L655 290" class="data-flow" />
+  <path d="M855 215 L855 290" class="data-flow" />
+  <path d="M455 335 L455 410" class="data-flow" />
+  <path d="M655 335 L655 410" class="data-flow" />
+  <path d="M855 335 L855 410" class="data-flow" />
+  
+  <!-- Horizontal Connectors in Integration Layer -->
+  <path d="M530 312 L580 312" class="data-flow" />
+  <path d="M730 312 L780 312" class="data-flow" />
+  
+  <!-- Horizontal Connectors in SAP FICA Layer -->
+  <path d="M530 432 L580 432" class="data-flow" />
+  <path d="M730 432 L780 432" class="data-flow" />
+  
+  <!-- Key Benefits added -->
+  <rect x="350" y="490" width="600" height="80" rx="10" fill="#1b2838" />
+  <text x="650" y="522" class="section-title">Key Benefits</text>
+  
+  <rect x="370" y="530" width="170" height="25" rx="5" fill="#fff" stroke="#1b2838" stroke-width="2" />
+  <text x="465" y="547" class="description">Expedited Processing</text>
+  
+  <rect x="560" y="530" width="170" height="25" rx="5" fill="#fff" stroke="#1b2838" stroke-width="2" />
+  <text x="645" y="547" class="description">Improved Cash Flow</text>
+  
+  <rect x="750" y="530" width="190" height="25" rx="5" fill="#fff" stroke="#1b2838" stroke-width="2" />
+  <text x="845" y="547" class="description">Enhanced Customer Satisfaction</text>
+  
+  <!-- SAP Logo -->
+  <text x="940" y="590" font-family="Arial" font-size="16" font-weight="bold" fill="#1b2838"></text>
+</svg>
